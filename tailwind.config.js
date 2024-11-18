@@ -121,6 +121,11 @@ export default {
         sm: 'calc(var(--radius) / 2)',
         xs: 'calc(var(--radius) / 4)',
       },
+      boxShadow: {
+        DEFAULT: '0px 2px 4px 0px rgba(0, 0, 0, 0.20)',
+        1: '0px 2px 4px 0px rgba(0, 0, 0, 0.20)',
+        2: '0px 1px 10px 0px rgba(0, 0, 0, 0.10)',
+      },
     },
   },
   plugins: [],

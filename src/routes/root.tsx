@@ -37,6 +37,13 @@ function Root() {
         </div>
       </section>
       <section className="flex flex-col gap-4">
+        <h2 className="text-4xl font-bold">Shadow</h2>
+        <div className="flex gap-4">
+          <div className="size-40 rounded-xl bg-white shadow-1" />
+          <div className="size-40 rounded-xl bg-white shadow-2" />
+        </div>
+      </section>
+      <section className="flex flex-col gap-4">
         <h2 className="text-4xl font-bold">Colors</h2>
         <div className="flex flex-col gap-4">
           <h3 className="text-xl font-semibold">Primary</h3>
