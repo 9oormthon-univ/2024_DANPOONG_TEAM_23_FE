@@ -4,22 +4,22 @@ function Root() {
       <section className="flex flex-col gap-4">
         <h2 className="text-2xl font-semibold">Typography</h2>
         <div className="flex flex-col gap-4">
-          <span className="text-28_bold">
+          <span className="text-xl font-bold">
             28_bold 28px 단풍톤 dpt bold 150% 2%
           </span>
-          <span className="text-24_bold">
+          <span className="text-lg font-bold">
             24_bold 24px 단풍톤 dpt bold 150% 2%
           </span>
-          <span className="text-24_medium">
+          <span className="text-lg font-medium">
             24_medium 24px 단풍톤 dpt medium 150% 2%
           </span>
-          <span className="text-22_medium">
+          <span className="text-base font-medium">
             22_medium 22px 단풍톤 dpt medium 150% 2%
           </span>
-          <span className="text-20_medium">
+          <span className="text-sm font-medium">
             20_medium 20px 단풍톤 dpt medium 150% 2%
           </span>
-          <span className="text-18_medium">
+          <span className="text-xs font-medium">
             18_medium 18px 단풍톤 dpt medium 150% 2%
           </span>
         </div>

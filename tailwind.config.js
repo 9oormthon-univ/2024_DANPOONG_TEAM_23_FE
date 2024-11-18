@@ -9,54 +9,11 @@ export default {
         sans: ['Noto Sans KR', fontFamily.sans],
       },
       fontSize: {
-        '28_bold': [
-          '28px',
-          {
-            fontWeight: '700',
-            lineHeight: '150%',
-            letterSpacing: '2%',
-          },
-        ],
-        '24_bold': [
-          '24px',
-          {
-            fontWeight: '700',
-            lineHeight: '150%',
-            letterSpacing: '2%',
-          },
-        ],
-        '24_medium': [
-          '24px',
-          {
-            fontWeight: '500',
-            lineHeight: '150%',
-            letterSpacing: '2%',
-          },
-        ],
-        '22_medium': [
-          '22px',
-          {
-            fontWeight: '500',
-            lineHeight: '150%',
-            letterSpacing: '2%',
-          },
-        ],
-        '20_medium': [
-          '20px',
-          {
-            fontWeight: '500',
-            lineHeight: '150%',
-            letterSpacing: '2%',
-          },
-        ],
-        '18_medium': [
-          '18px',
-          {
-            fontWeight: '500',
-            lineHeight: '150%',
-            letterSpacing: '2%',
-          },
-        ],
+        base: '22px',
+        xs: '18px',
+        sm: '20px',
+        lg: '24px',
+        xl: '28px',
       },
       colors: {
         background: {
