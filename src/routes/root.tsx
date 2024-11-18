@@ -4,32 +4,23 @@ function Root() {
       <section className="flex flex-col gap-4">
         <h2 className="text-2xl font-semibold">Typography</h2>
         <div className="flex flex-col gap-4">
-          <span className="text-[24px] font-bold leading-[150%] tracking-[2%]">
-            H1 24PX 단풍톤 DPT BOLD 150% 2%
+          <span className="text-28_bold">
+            28_bold 28px 단풍톤 dpt bold 150% 2%
           </span>
-          <span className="text-[22px] font-bold leading-[150%] tracking-[2%]">
-            H2 22PX 단풍톤 DPT BOLD 150% 2%
+          <span className="text-24_bold">
+            24_bold 24px 단풍톤 dpt bold 150% 2%
           </span>
-          <span className="text-[20px] font-bold leading-[150%] tracking-[2%]">
-            H3 20PX 단풍톤 DPT BOLD 150% 2%
+          <span className="text-24_medium">
+            24_medium 24px 단풍톤 dpt medium 150% 2%
           </span>
-          <span className="text-[18px] font-bold leading-[150%] tracking-[2%]">
-            BODY1 18PX 단풍톤 DPT BOLD 150% 2%
+          <span className="text-22_medium">
+            22_medium 22px 단풍톤 dpt medium 150% 2%
           </span>
-          <span className="text-[18px] font-normal leading-[150%] tracking-[2%]">
-            BODY2 18PX 단풍톤 DPT REGULAR 150% 2%
+          <span className="text-20_medium">
+            20_medium 20px 단풍톤 dpt medium 150% 2%
           </span>
-          <span className="text-[16px] font-medium leading-[150%] tracking-[2%]">
-            BODY3 16PX 단풍톤 DPT MEDIUM 150% 2%
-          </span>
-          <span className="text-[16px] font-normal leading-[150%] tracking-[2%]">
-            BODY4 16PX 단풍톤 DPT REGULAR 150% 2%
-          </span>
-          <span className="text-[14px] font-medium leading-[150%] tracking-[2%]">
-            CAPTION1 14PX 단풍톤 DPT MEDIUM 150% 2%
-          </span>
-          <span className="text-[12px] font-medium leading-[150%] tracking-[2%]">
-            CAPTION2 12PX 단풍톤 DPT MEDIUM 150% 2%
+          <span className="text-18_medium">
+            18_medium 18px 단풍톤 dpt medium 150% 2%
           </span>
         </div>
       </section>
