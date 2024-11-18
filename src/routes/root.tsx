@@ -1,3 +1,5 @@
+import { Button } from '~/components/ui/button'
+
 function Root() {
   return (
     <div className="flex w-full flex-col gap-8 p-4">
@@ -140,6 +142,39 @@ function Root() {
             <div className="h-12 w-24 bg-background-50" />
             <div className="h-12 w-24 bg-background-900" />
           </div>
+        </div>
+      </section>
+      <section className="flex flex-col gap-4">
+        <h2 className="text-2xl font-semibold">Components</h2>
+        <div className="flex flex-col gap-4">
+          <h3 className="text-xl font-semibold">Header</h3>
+          <div className="flex"></div>
+
+          <h3 className="text-xl font-semibold">Bottom Navigation Bar</h3>
+          <div className="flex"></div>
+
+          <h3 className="text-xl font-semibold">Buttons</h3>
+          <div className="flex flex-col gap-4">
+            <Button className="w-72" disabled>
+              다음
+            </Button>
+            <Button className="w-72">다음</Button>
+          </div>
+
+          <h3 className="text-xl font-semibold">Toggle</h3>
+          <div className="flex"></div>
+
+          <h3 className="text-xl font-semibold">Card</h3>
+          <div className="flex"></div>
+
+          <h3 className="text-xl font-semibold">Text Input</h3>
+          <div className="flex"></div>
+
+          <h3 className="text-xl font-semibold">Profile</h3>
+          <div className="flex"></div>
+
+          <h3 className="text-xl font-semibold">Icon</h3>
+          <div className="flex"></div>
         </div>
       </section>
     </div>
