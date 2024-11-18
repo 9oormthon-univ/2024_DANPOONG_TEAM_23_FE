@@ -25,5 +25,6 @@
     /* Paths */
     "paths": { "~/*": ["./src/*"] }
   },
-  "include": ["src"]
+  "include": ["src", "svg.d.ts"],
+  "types": ["vite-plugin-svgr/client"]
 }
