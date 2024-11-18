@@ -5,7 +5,7 @@ import BottomNavigationFloor from '~/assets/svgs/BottomNavigationFloor.svg?react
 import Home from '~/assets/svgs/Home.svg?react'
 
 const bottomNavigationBarVariants = cva({
-  base: 'fixed bottom-0 flex h-14 full',
+  base: 'fixed bottom-0 flex h-14 w-full',
   variants: {
     variant: {
       default: '[&_.navigation-floor]:bg-white [&_.home-button]:bg-primary-500',
