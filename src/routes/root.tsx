@@ -1,3 +1,4 @@
+import { BottomNavigationBar } from '~/components/ui/bottom-navigation-bar'
 import { Button } from '~/components/ui/button'
 
 function Root() {
@@ -158,7 +159,9 @@ function Root() {
           <div className="flex"></div>
 
           <h3 className="text-xl font-semibold">Bottom Navigation Bar</h3>
-          <div className="flex"></div>
+          <div className="flex">
+            <BottomNavigationBar />
+          </div>
 
           <h3 className="text-xl font-semibold">Buttons</h3>
           <div className="flex flex-col gap-4">
