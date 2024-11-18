@@ -4,7 +4,7 @@ function Root() {
   return (
     <div className="flex w-full flex-col gap-8 p-4">
       <section className="flex flex-col gap-4">
-        <h2 className="text-2xl font-semibold">Typography</h2>
+        <h2 className="text-4xl font-bold">Typography</h2>
         <div className="flex flex-col gap-4">
           <span className="text-xl font-bold">
             28_bold 28px 단풍톤 dpt bold 150% 2%
@@ -27,7 +27,7 @@ function Root() {
         </div>
       </section>
       <section className="flex flex-col gap-4">
-        <h2 className="text-2xl font-semibold">Rounding</h2>
+        <h2 className="text-4xl font-bold">Rounding</h2>
         <div className="flex gap-4">
           <div className="size-40 rounded-xs bg-gray-800" />
           <div className="size-40 rounded-sm bg-gray-800" />
@@ -37,7 +37,7 @@ function Root() {
         </div>
       </section>
       <section className="flex flex-col gap-4">
-        <h2 className="text-2xl font-semibold">Colors</h2>
+        <h2 className="text-4xl font-bold">Colors</h2>
         <div className="flex flex-col gap-4">
           <h3 className="text-xl font-semibold">Primary</h3>
           <div className="flex">
@@ -145,7 +145,7 @@ function Root() {
         </div>
       </section>
       <section className="flex flex-col gap-4">
-        <h2 className="text-2xl font-semibold">Components</h2>
+        <h2 className="text-4xl font-bold">Components</h2>
         <div className="flex flex-col gap-4">
           <h3 className="text-xl font-semibold">Header</h3>
           <div className="flex"></div>
