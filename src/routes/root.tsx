@@ -2,6 +2,7 @@ import { GenderToggleGroup } from '~/components/gender-toggle-group'
 import { HospitalCard } from '~/components/hospital-card'
 import { Button } from '~/components/ui/button'
 import { Toggle, ToggleCheckIcon } from '~/components/ui/toggle'
+import { Profile } from '~/components/ui/profile'
 
 import Setting from '~/assets/svgs/setting.svg?react'
 import BottomNavigationFloor from '~/assets/svgs/bottom-navigation-floor.svg?react'
@@ -260,7 +261,12 @@ function Root() {
           <div className="flex"></div>
 
           <h3 className="text-xl font-semibold">Profile</h3>
-          <div className="flex"></div>
+          <div className="flex">
+            <Profile
+              src="https://w7.pngwing.com/pngs/710/71/png-transparent-profle-person-profile-user-circle-icons-icon-thumbnail.png"
+              alt="회원"
+            />
+          </div>
 
           <h3 className="text-xl font-semibold">Icon</h3>
           <div className="flex text-primary-500 [&_svg]:size-8">
