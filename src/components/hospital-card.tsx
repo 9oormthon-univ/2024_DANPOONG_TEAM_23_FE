@@ -24,7 +24,7 @@ function HospitalCard({
         <h4 className="text-lg font-medium text-gray-800">{name}</h4>
         <span className="text-xs font-medium text-gray-600">{category}</span>
         <div className="flex items-center gap-1 text-xs font-medium text-gray-500">
-          <Star />
+          <Star className="text-primary-500" />
           <span>{rating}</span>
         </div>
       </div>

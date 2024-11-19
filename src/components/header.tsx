@@ -1,4 +1,4 @@
-import GoBack from '~/assets/svgs/go-back.svg?react'
+import ChevronLeft from '~/assets/svgs/chevron-left.svg?react'
 import Setting from '~/assets/svgs/setting.svg?react'
 
 export interface HeaderProps {
@@ -25,7 +25,7 @@ function Header({
             onClick={onGoBackClick}
             className="flex h-10 w-10 items-center justify-center"
           >
-            <GoBack />
+            <ChevronLeft />
           </button>
         )}
       </div>

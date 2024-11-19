@@ -16,7 +16,7 @@ function BottomNavigationBar({ onClick }: BottomNavigationBarProps) {
         onClick={onClick}
         className="absolute bottom-[-5px] left-1/2 flex h-[88px] w-[88px] translate-x-[-50%] translate-y-[-50%] items-center justify-center rounded-[50%] bg-primary-500 shadow-1"
       >
-        <Home />
+        <Home className="text-white" />
       </button>
     </div>
   )
