@@ -1,5 +1,3 @@
-'use client'
-
 import * as TogglePrimitive from '@radix-ui/react-toggle'
 import { cva, type VariantProps } from 'cva'
 
@@ -32,10 +30,15 @@ function Toggle({ className, variant, size, children, ...props }: ToggleProps) {
       className={cn(toggleVariants({ variant, size, className }))}
       {...props}
     >
-      <ToggleCheck className="text-gray-100 transition-colors group-hover:text-primary-300 group-data-[state=on]:text-primary-500 [&_svg]:pointer-events-none [&_svg]:size-6 [&_svg]:shrink-0" />
       {children}
     </TogglePrimitive.Root>
   )
 }
 
-export { Toggle, toggleVariants }
+function ToggleCheckIcon() {
+  return (
+    <ToggleCheck className="text-gray-100 transition-colors group-hover:text-primary-300 group-data-[state=on]:text-primary-500 [&_svg]:pointer-events-none [&_svg]:size-6 [&_svg]:shrink-0" />
+  )
+}
+
+export { Toggle, ToggleCheckIcon, toggleVariants }
