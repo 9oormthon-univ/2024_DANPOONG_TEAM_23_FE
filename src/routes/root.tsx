@@ -1,7 +1,8 @@
+import { HospitalCard } from '~/components/hospital-card'
 import { BottomNavigationBar } from '~/components/ui/bottom-navigation-bar'
 import { Button } from '~/components/ui/button'
 import { Header } from '~/components/ui/header'
-import { Toggle } from '~/components/ui/toggle'
+import { Toggle, ToggleCheckIcon } from '~/components/ui/toggle'
 
 function Root() {
   return (
@@ -187,18 +188,33 @@ function Root() {
 
           <h3 className="text-xl font-semibold">Toggle</h3>
           <div className="flex flex-col gap-4">
-            <Toggle className="w-80">고혈압</Toggle>
-            <Toggle className="w-80" defaultPressed>
+            <Toggle className="w-80">
+              <ToggleCheckIcon />
               고혈압
             </Toggle>
-            <Toggle className="w-80">기타</Toggle>
             <Toggle className="w-80" defaultPressed>
+              <ToggleCheckIcon />
+              고혈압
+            </Toggle>
+            <Toggle className="w-80">
+              <ToggleCheckIcon />
+              기타
+            </Toggle>
+            <Toggle className="w-80" defaultPressed>
+              <ToggleCheckIcon />
               기타
             </Toggle>
           </div>
 
           <h3 className="text-xl font-semibold">Card</h3>
-          <div className="flex"></div>
+          <div className="flex gap-4">
+            <HospitalCard
+              image="https://www.rch.or.kr/web/rchseoul/file/image/uu/69728946aa69442596d61da622f6093e"
+              name="냠냠병원"
+              category="이비인후과"
+              rating={4.3}
+            />
+          </div>
 
           <h3 className="text-xl font-semibold">Text Input</h3>
           <div className="flex"></div>
