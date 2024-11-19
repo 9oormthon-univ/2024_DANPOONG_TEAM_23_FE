@@ -1,4 +1,4 @@
-import { Footer } from '~/components/ui/footer'
+import { BottomNavigationBar } from '~/components/ui/bottom-navigation-bar'
 import { Button } from '~/components/ui/button'
 import { Header } from '~/components/ui/header'
 import { Toggle } from '~/components/ui/toggle'
@@ -168,7 +168,7 @@ function Root() {
 
           <h3 className="text-xl font-semibold">Bottom Navigation Bar</h3>
           <div className="flex">
-            <Footer />
+            <BottomNavigationBar />
           </div>
 
           <h3 className="text-xl font-semibold">Buttons</h3>

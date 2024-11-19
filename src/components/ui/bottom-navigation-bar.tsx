@@ -1,15 +1,15 @@
-import FooterFloor from '~/assets/svgs/footer-floor.svg?react'
+import BottomNavigationFloor from '~/assets/svgs/bottom-navigation-floor.svg?react'
 import Home from '~/assets/svgs/home.svg?react'
 
-export interface FooterProps {
+export interface BottomNavigationBarProps {
   onClick?: () => void
 }
 
-function Footer({ onClick }: FooterProps) {
+function BottomNavigationBar({ onClick }: BottomNavigationBarProps) {
   return (
-    <footer className="fixed bottom-0 flex h-14 w-full">
+    <div className="fixed bottom-0 flex h-14 w-full">
       <div className="h-14 w-4/12 flex-1 bg-white" />
-      <FooterFloor />
+      <BottomNavigationFloor />
       <div className="h-14 w-4/12 flex-1 bg-white" />
       <button
         type="button"
@@ -18,8 +18,8 @@ function Footer({ onClick }: FooterProps) {
       >
         <Home />
       </button>
-    </footer>
+    </div>
   )
 }
 
-export { Footer }
+export { BottomNavigationBar }
