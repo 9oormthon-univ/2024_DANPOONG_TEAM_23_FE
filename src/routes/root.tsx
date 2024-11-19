@@ -1,9 +1,12 @@
 import { GenderToggleGroup } from '~/components/gender-toggle-group'
 import { HospitalCard } from '~/components/hospital-card'
-import { BottomNavigationBar } from '~/components/ui/bottom-navigation-bar'
 import { Button } from '~/components/ui/button'
-import { Header } from '~/components/ui/header'
 import { Toggle, ToggleCheckIcon } from '~/components/ui/toggle'
+
+import GoBack from '~/assets/svgs/go-back.svg?react'
+import Setting from '~/assets/svgs/setting.svg?react'
+import BottomNavigationFloor from '~/assets/svgs/bottom-navigation-floor.svg?react'
+import Home from '~/assets/svgs/home.svg?react'
 
 function Root() {
   return (
@@ -161,16 +164,42 @@ function Root() {
         <div className="flex flex-col gap-4">
           <h3 className="text-xl font-semibold">Header</h3>
           <div className="flex">
-            <Header
-              title="내 건강"
-              showSettingButton={true}
-              showGoBackButton={true}
-            />
+            <header className="border-gray50 flex h-16 w-full max-w-screen-sm items-center justify-between border-b px-2.5 py-6">
+              <div className="w-10">
+                <button
+                  type="button"
+                  className="flex h-10 w-10 items-center justify-center"
+                >
+                  <GoBack />
+                </button>
+              </div>
+              <div className="min-w-60 text-center text-xl font-bold">
+                내 건강
+              </div>
+              <div className="w-10">
+                <button
+                  type="button"
+                  className="flex h-10 w-10 items-center justify-center"
+                >
+                  <Setting />
+                </button>
+              </div>
+            </header>
           </div>
 
           <h3 className="text-xl font-semibold">Bottom Navigation Bar</h3>
           <div className="flex">
-            <BottomNavigationBar />
+            <div className="relative mt-20 flex h-14 w-full max-w-screen-sm">
+              <div className="h-14 w-4/12 flex-1 bg-white" />
+              <BottomNavigationFloor />
+              <div className="h-14 w-4/12 flex-1 bg-white" />
+              <button
+                type="button"
+                className="absolute bottom-[-5px] left-1/2 flex h-[88px] w-[88px] translate-x-[-50%] translate-y-[-50%] items-center justify-center rounded-[50%] bg-primary-500 shadow-1"
+              >
+                <Home />
+              </button>
+            </div>
           </div>
 
           <h3 className="text-xl font-semibold">Buttons</h3>
