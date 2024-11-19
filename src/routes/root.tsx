@@ -1,5 +1,6 @@
 import { BottomNavigationBar } from '~/components/ui/bottom-navigation-bar'
 import { Button } from '~/components/ui/button'
+import { Toggle } from '~/components/ui/toggle'
 
 function Root() {
   return (
@@ -172,7 +173,16 @@ function Root() {
           </div>
 
           <h3 className="text-xl font-semibold">Toggle</h3>
-          <div className="flex"></div>
+          <div className="flex flex-col gap-4">
+            <Toggle className="w-80">고혈압</Toggle>
+            <Toggle className="w-80" defaultPressed>
+              고혈압
+            </Toggle>
+            <Toggle className="w-80">기타</Toggle>
+            <Toggle className="w-80" defaultPressed>
+              기타
+            </Toggle>
+          </div>
 
           <h3 className="text-xl font-semibold">Card</h3>
           <div className="flex"></div>
