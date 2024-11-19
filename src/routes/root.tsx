@@ -164,7 +164,7 @@ function Root() {
         <div className="flex flex-col gap-4">
           <h3 className="text-xl font-semibold">Header</h3>
           <div className="flex">
-            <header className="border-gray50 flex h-16 w-full max-w-screen-sm items-center justify-between border-b px-2.5 py-6">
+            <header className="border-gray50 flex h-16 w-full max-w-screen-sm items-center justify-between border-b bg-white px-2.5 py-6">
               <div className="w-10">
                 <button
                   type="button"
