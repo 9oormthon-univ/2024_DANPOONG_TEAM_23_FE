@@ -1,3 +1,4 @@
+import { GenderToggleGroup } from '~/components/gender-toggle-group'
 import { HospitalCard } from '~/components/hospital-card'
 import { BottomNavigationBar } from '~/components/ui/bottom-navigation-bar'
 import { Button } from '~/components/ui/button'
@@ -187,7 +188,7 @@ function Root() {
           </div>
 
           <h3 className="text-xl font-semibold">Toggle</h3>
-          <div className="flex flex-col gap-4">
+          <div className="flex flex-col items-start gap-4">
             <Toggle className="w-80">
               <ToggleCheckIcon />
               고혈압
@@ -204,6 +205,7 @@ function Root() {
               <ToggleCheckIcon />
               기타
             </Toggle>
+            <GenderToggleGroup />
           </div>
 
           <h3 className="text-xl font-semibold">Card</h3>
