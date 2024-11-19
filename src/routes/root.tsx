@@ -3,10 +3,19 @@ import { HospitalCard } from '~/components/hospital-card'
 import { Button } from '~/components/ui/button'
 import { Toggle, ToggleCheckIcon } from '~/components/ui/toggle'
 
-import GoBack from '~/assets/svgs/go-back.svg?react'
 import Setting from '~/assets/svgs/setting.svg?react'
 import BottomNavigationFloor from '~/assets/svgs/bottom-navigation-floor.svg?react'
 import Home from '~/assets/svgs/home.svg?react'
+import ChevronDown from '~/assets/svgs/chevron-down.svg?react'
+import ChevronLeft from '~/assets/svgs/chevron-left.svg?react'
+import ChevronUp from '~/assets/svgs/chevron-up.svg?react'
+import Calendar from '~/assets/svgs/calendar.svg?react'
+import Delete from '~/assets/svgs/delete.svg?react'
+import Logout from '~/assets/svgs/logout.svg?react'
+import Place from '~/assets/svgs/place.svg?react'
+import Star from '~/assets/svgs/star.svg?react'
+import ArrowRight from '~/assets/svgs/arrow-right.svg?react'
+import Phone from '~/assets/svgs/phone.svg?react'
 
 function Root() {
   return (
@@ -170,7 +179,7 @@ function Root() {
                   type="button"
                   className="flex h-10 w-10 items-center justify-center"
                 >
-                  <GoBack />
+                  <ChevronLeft />
                 </button>
               </div>
               <div className="min-w-60 text-center text-xl font-bold">
@@ -197,7 +206,7 @@ function Root() {
                 type="button"
                 className="absolute bottom-[-5px] left-1/2 flex h-[88px] w-[88px] translate-x-[-50%] translate-y-[-50%] items-center justify-center rounded-[50%] bg-primary-500 shadow-1"
               >
-                <Home />
+                <Home className="text-white" />
               </button>
             </div>
           </div>
@@ -254,7 +263,20 @@ function Root() {
           <div className="flex"></div>
 
           <h3 className="text-xl font-semibold">Icon</h3>
-          <div className="flex"></div>
+          <div className="flex text-primary-500 [&_svg]:size-8">
+            <ChevronDown />
+            <ChevronLeft />
+            <ChevronUp />
+            <Calendar />
+            <Delete />
+            <Setting />
+            <Logout />
+            <Home />
+            <Place />
+            <Star />
+            <ArrowRight />
+            <Phone />
+          </div>
         </div>
       </section>
     </div>
