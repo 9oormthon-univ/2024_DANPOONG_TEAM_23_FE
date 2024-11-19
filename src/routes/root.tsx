@@ -170,6 +170,12 @@ function Root() {
               다음
             </Button>
             <Button className="w-72">다음</Button>
+            <Button className="w-28" size="sm">
+              전화하기
+            </Button>
+            <Button className="w-28" variant="outline" size="sm">
+              알아보기
+            </Button>
           </div>
 
           <h3 className="text-xl font-semibold">Toggle</h3>

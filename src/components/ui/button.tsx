@@ -7,9 +7,12 @@ const buttonVariants = cva({
   variants: {
     variant: {
       default: 'bg-primary-500 text-white hover:bg-primary-600',
+      outline:
+        'bg-white text-primary-500 border border-gray-100 hover:bg-gray-50',
     },
     size: {
       default: 'px-7 py-3.5',
+      sm: 'px-4 py-2.5 rounded-xl text-xs font-medium',
     },
   },
   defaultVariants: {
