@@ -1,5 +1,6 @@
 import { BottomNavigationBar } from '~/components/ui/bottom-navigation-bar'
 import { Button } from '~/components/ui/button'
+import { Header } from '~/components/ui/header'
 import { Toggle } from '~/components/ui/toggle'
 
 function Root() {
@@ -157,7 +158,13 @@ function Root() {
         <h2 className="text-4xl font-bold">Components</h2>
         <div className="flex flex-col gap-4">
           <h3 className="text-xl font-semibold">Header</h3>
-          <div className="flex"></div>
+          <div className="flex">
+            <Header
+              title="내 건강"
+              showSettingButton={true}
+              showGoBackButton={true}
+            />
+          </div>
 
           <h3 className="text-xl font-semibold">Bottom Navigation Bar</h3>
           <div className="flex">
