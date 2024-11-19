@@ -1,8 +1,9 @@
 import { cva, type VariantProps } from 'cva'
+
 import { cn } from '~/utils/cn'
 
-import BottomNavigationFloor from '~/assets/svgs/BottomNavigationFloor.svg?react'
-import Home from '~/assets/svgs/Home.svg?react'
+import BottomNavigationFloor from '~/assets/svgs/bottom-navigation-floor.svg?react'
+import Home from '~/assets/svgs/home.svg?react'
 
 const bottomNavigationBarVariants = cva({
   base: 'fixed bottom-0 flex h-14 w-full',
