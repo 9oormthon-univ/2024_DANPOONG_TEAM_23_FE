@@ -1,3 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  :root {
+    --background-50: 0 0% 98%;
+    --background-900: 0 0% 13%;
+
+    --primary-50: 169 38% 94%;
+    --primary-100: 165 55% 87%;
+    --primary-200: 166 53% 74%;
+    --primary-300: 166 54% 61%;
+    --primary-400: 166 58% 48%;
+    --primary-500: 166 100% 35%;
+    --primary-600: 166 100% 28%;
+    --primary-700: 166 100% 21%;
+    --primary-800: 166 100% 13%;
+    --primary-900: 166 100% 5%;
+
+    --secondary-50: 17 100% 96%;
+    --secondary-100: 17 77% 93%;
+    --secondary-200: 17 100% 90%;
+    --secondary-300: 17 100% 85%;
+    --secondary-400: 17 88% 79%;
+    --secondary-500: 17 100% 74%;
+    --secondary-600: 17 96% 67%;
+    --secondary-700: 17 88% 59%;
+    --secondary-800: 17 84% 52%;
+    --secondary-900: 17 89% 46%;
+
+    --error-50: 0 100% 98%;
+    --error-100: 0 100% 96%;
+    --error-200: 0 96% 89%;
+    --error-300: 0 93% 77%;
+    --error-400: 0 93% 66%;
+    --error-500: 0 91% 58%;
+    --error-600: 0 84% 46%;
+    --error-700: 0 70% 39%;
+    --error-800: 0 70% 29%;
+    --error-900: 0 67% 18%;
+
+    --success-50: 137 100% 98%;
+    --success-100: 136 87% 94%;
+    --success-200: 137 69% 85%;
+    --success-300: 137 67% 75%;
+    --success-400: 137 62% 60%;
+    --success-500: 137 62% 50%;
+    --success-600: 140 59% 43%;
+    --success-700: 144 50% 35%;
+    --success-800: 135 58% 25%;
+    --success-900: 137 76% 15%;
+
+    --warning-50: 35 100% 97%;
+    --warning-100: 37 100% 91%;
+    --warning-200: 36 100% 85%;
+    --warning-300: 37 100% 79%;
+    --warning-400: 37 100% 68%;
+    --warning-500: 37 100% 56%;
+    --warning-600: 37 79% 50%;
+    --warning-700: 36 80% 37%;
+    --warning-800: 34 82% 25%;
+    --warning-900: 28 90% 12%;
+
+    --info-50: 214 100% 99%;
+    --info-100: 214 100% 96%;
+    --info-200: 214 94% 87%;
+    --info-300: 209 91% 79%;
+    --info-400: 209 91% 70%;
+    --info-500: 209 90% 61%;
+    --info-600: 210 58% 50%;
+    --info-700: 211 60% 38%;
+    --info-800: 213 65% 27%;
+    --info-900: 218 74% 15%;
+
+    --gray-50: 0 0% 94%;
+    --gray-100: 0 0% 86%;
+    --gray-200: 0 0% 74%;
+    --gray-300: 0 0% 60%;
+    --gray-400: 0 0% 52%;
+    --gray-500: 0 0% 40%;
+    --gray-600: 0 0% 37%;
+    --gray-700: 0 0% 26%;
+    --gray-800: 0 0% 20%;
+    --gray-900: 0 0% 7%;
+
+    --radius: 1rem;
+  }
+}
+
+@layer base {
+  body {
+    @apply bg-black;
+  }
+}

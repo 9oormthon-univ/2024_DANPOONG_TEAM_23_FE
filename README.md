@@ -30,7 +30,7 @@
   [꼬리말(선택 사항)]
   ```
 
-  - 타입은 다음을 따릅니다.
+  - 타입은 다음 중 하나를 사용합니다. **Angular Convention**
     - build
     - chore
     - ci
@@ -47,10 +47,12 @@
 
 - 컴포넌트는 `function` 키워드를 사용해 함수 선언으로 작성합니다.
 - 그 외 유틸 함수 등은 `const` 키워드로 함수 표현식으로 작성합니다.
-- 컴포넌트는 `default export`가 아닌 `named export`로 파일 끝에 묶어서 내보냅니다.
+- 모든 함수는 `default export`가 아닌 `named export`로 파일 끝에 묶어서 내보냅니다.
+
+  - 타입은 예외적으로 선언과 동시에 `export`합니다.
 
   ```ts
-  interface Props {}
+  export interface Props {} // 타입
 
   function A() {} // 컴포넌트
 
@@ -58,7 +60,7 @@
 
   const utilA = () => {} // util 함수
 
-  export { type Props, A, B, utilA }
+  export { A, B, utilA }
   ```
 
 ## 프로젝트 구조
@@ -69,8 +71,12 @@
 ├── public
 └── src
     ├── assets
+    │   └── images
+    │   └── svgs
     ├── components
+    │   └── ui
     ├── routes
     ├── styles
     └── utils
+    └── main.tsx
 ```

@@ -1,0 +1,25 @@
+import BottomNavigationFloor from '~/assets/svgs/bottom-navigation-floor.svg?react'
+import Home from '~/assets/svgs/home.svg?react'
+
+export interface BottomNavigationBarProps {
+  onClick?: () => void
+}
+
+function BottomNavigationBar({ onClick }: BottomNavigationBarProps) {
+  return (
+    <div className="fixed bottom-0 flex h-14 w-full max-w-screen-sm">
+      <div className="h-14 w-4/12 flex-1 bg-white" />
+      <BottomNavigationFloor />
+      <div className="h-14 w-4/12 flex-1 bg-white" />
+      <button
+        type="button"
+        onClick={onClick}
+        className="absolute -bottom-1 left-1/2 flex size-[88px] -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-xl bg-primary-500 shadow-1"
+      >
+        <Home className="text-white" />
+      </button>
+    </div>
+  )
+}
+
+export { BottomNavigationBar }
