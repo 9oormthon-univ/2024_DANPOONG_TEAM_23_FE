@@ -7,13 +7,20 @@ import { RootLayout } from '~/layouts/root-layout'
 import { Root } from '~/routes/root'
 import { DesignSystem } from '~/routes/design-system'
 import { BaseLayout } from './layouts/base-layout'
+import { Landing } from './routes/landing'
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <RootLayout />,
     children: [
-      { path: '/', children: [{ index: true, element: <Root /> }] },
+      {
+        path: '/',
+        children: [
+          { index: true, element: <Root /> },
+          { path: 'landing', element: <Landing /> },
+        ],
+      },
       {
         path: '/',
         element: <BaseLayout />,
