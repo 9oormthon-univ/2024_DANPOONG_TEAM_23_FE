@@ -6,14 +6,19 @@ import '~/styles/globals.css'
 import { RootLayout } from '~/layouts/root-layout'
 import { Root } from '~/routes/root'
 import { DesignSystem } from '~/routes/design-system'
+import { BaseLayout } from './layouts/base-layout'
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <RootLayout />,
     children: [
-      { index: true, element: <Root /> },
-      { path: 'design-system', element: <DesignSystem /> },
+      { path: '/', children: [{ index: true, element: <Root /> }] },
+      {
+        path: '/',
+        element: <BaseLayout />,
+        children: [{ path: 'design-system', element: <DesignSystem /> }],
+      },
     ],
   },
 ])
