@@ -20,7 +20,7 @@ import Phone from '~/assets/svgs/phone.svg?react'
 
 function DesignSystem() {
   return (
-    <div className="flex w-full flex-col gap-8 p-4">
+    <div className="flex w-full flex-col gap-8 py-4">
       <section className="flex flex-col gap-4">
         <h2 className="text-4xl font-bold">Typography</h2>
         <div className="flex flex-col gap-4">
@@ -47,11 +47,11 @@ function DesignSystem() {
       <section className="flex flex-col gap-4">
         <h2 className="text-4xl font-bold">Rounding</h2>
         <div className="flex gap-4">
-          <div className="size-40 rounded-xs bg-gray-800" />
-          <div className="size-40 rounded-sm bg-gray-800" />
-          <div className="size-40 rounded-md bg-gray-800" />
-          <div className="size-40 rounded-lg bg-gray-800" />
-          <div className="size-40 rounded-xl bg-gray-800" />
+          <div className="aspect-square w-full rounded-xs bg-gray-800" />
+          <div className="aspect-square w-full rounded-sm bg-gray-800" />
+          <div className="aspect-square w-full rounded-md bg-gray-800" />
+          <div className="aspect-square w-full rounded-lg bg-gray-800" />
+          <div className="aspect-square w-full rounded-xl bg-gray-800" />
         </div>
       </section>
       <section className="flex flex-col gap-4">
