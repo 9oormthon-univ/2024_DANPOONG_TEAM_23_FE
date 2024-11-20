@@ -92,6 +92,6 @@
 
 @layer base {
   body {
-    @apply bg-background-50;
+    @apply bg-black;
   }
 }
