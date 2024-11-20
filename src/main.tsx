@@ -8,6 +8,7 @@ import { Root } from '~/routes/root'
 import { DesignSystem } from '~/routes/design-system'
 import { BaseLayout } from './layouts/base-layout'
 import { Landing } from './routes/landing'
+import { Login } from './routes/login'
 
 const router = createBrowserRouter([
   {
@@ -19,6 +20,7 @@ const router = createBrowserRouter([
         children: [
           { index: true, element: <Root /> },
           { path: 'landing', element: <Landing /> },
+          { path: 'login', element: <Login /> },
         ],
       },
       {
