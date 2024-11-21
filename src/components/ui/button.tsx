@@ -6,9 +6,8 @@ const buttonVariants = cva({
   base: 'inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-sm text-lg font-bold ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:bg-gray-100 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0',
   variants: {
     variant: {
-      default: 'bg-primary-500 text-white hover:bg-primary-600',
-      outline:
-        'bg-white text-primary-500 border border-gray-100 hover:bg-gray-50',
+      default: 'bg-primary-500 text-white',
+      outline: 'bg-white text-primary-500 border border-gray-100',
     },
     size: {
       default: 'px-7 py-3.5',
