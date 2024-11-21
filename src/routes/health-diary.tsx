@@ -283,7 +283,7 @@ function Step7({ onNext }: { onNext: (complex: string[]) => void }) {
             onNext(selected)
           }}
         >
-          다음
+          증상 분석하기
         </Button>
       </div>
     </>
