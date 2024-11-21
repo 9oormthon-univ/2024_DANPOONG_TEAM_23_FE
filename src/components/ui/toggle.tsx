@@ -5,7 +5,7 @@ import { cn } from '~/utils/cn'
 import ToggleCheck from '~/assets/svgs/toggle-check.svg?react'
 
 const toggleVariants = cva({
-  base: 'inline-flex group items-center rounded-sm text-lg font-medium text-gray-800 ring-offset-background transition-colors hover:bg-primary-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=on]:bg-primary-200 gap-2',
+  base: 'inline-flex group items-center rounded-sm text-lg font-medium text-gray-800 ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=on]:bg-primary-200 gap-2',
   variants: {
     variant: {
       default: 'bg-gray-50',
@@ -37,7 +37,7 @@ function Toggle({ className, variant, size, children, ...props }: ToggleProps) {
 
 function ToggleCheckIcon() {
   return (
-    <ToggleCheck className="text-gray-100 transition-colors group-hover:text-primary-300 group-data-[state=on]:text-primary-500 [&_svg]:pointer-events-none [&_svg]:size-6 [&_svg]:shrink-0" />
+    <ToggleCheck className="text-gray-100 transition-colors group-data-[state=on]:text-primary-500 [&_svg]:pointer-events-none [&_svg]:size-6 [&_svg]:shrink-0" />
   )
 }
 
