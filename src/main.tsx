@@ -10,6 +10,7 @@ import { BaseLayout } from './layouts/base-layout'
 import { Landing } from './routes/landing'
 import { Login } from './routes/login'
 import { Greeting } from './routes/greeting'
+import { Survey } from './routes/survey/survey'
 
 const router = createBrowserRouter([
   {
@@ -23,6 +24,7 @@ const router = createBrowserRouter([
           { path: 'landing', element: <Landing /> },
           { path: 'login', element: <Login /> },
           { path: 'greeting', element: <Greeting /> },
+          { path: 'survey', element: <Survey /> },
         ],
       },
       {
