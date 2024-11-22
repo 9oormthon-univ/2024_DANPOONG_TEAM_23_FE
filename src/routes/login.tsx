@@ -5,7 +5,7 @@ import LoginLogo from '~/assets/svgs/login-logo.svg?react'
 
 function Login() {
   return (
-    <div className="h-dvh w-dvw bg-primary-50">
+    <div className="h-dvh w-dvw max-w-screen-sm bg-primary-50">
       <div className="flex h-3/5 items-end justify-center">
         <LoginLogo />
       </div>
