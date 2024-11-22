@@ -3,26 +3,23 @@ import { Card } from '~/components/ui/card'
 import Star from '~/assets/svgs/star.svg?react'
 
 function HospitalCard({
-  image,
   name,
   category,
   rating,
 }: {
-  image: string
   name: string
   category: string
   rating: number
 }) {
   return (
-    <Card>
-      <img
-        src={image}
-        alt={name}
-        className="size-[110px] rounded-sm shadow-2"
-      />
+    <Card className="shadow-2">
       <div className="flex h-full flex-col justify-between">
-        <h4 className="text-lg font-medium text-gray-800">{name}</h4>
-        <span className="text-xs font-medium text-gray-600">{category}</span>
+        <h4 className="line-clamp-1 text-lg font-medium text-gray-800">
+          {name}
+        </h4>
+        <span className="line-clamp-1 text-xs font-medium text-gray-600">
+          {category}
+        </span>
         <div className="flex items-center gap-1 text-xs font-medium text-gray-500">
           <Star className="text-primary-500" />
           <span>{rating}</span>

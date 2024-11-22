@@ -9,6 +9,7 @@ import { HeaderLayout } from '~/layouts/header-layout'
 import { Root } from '~/routes/root'
 import { DesignSystem } from '~/routes/design-system'
 import { HealthDiary } from '~/routes/health-diary'
+import { DiagnoseResult } from '~/routes/diagnose-result'
 
 const router = createBrowserRouter([
   {
@@ -19,7 +20,15 @@ const router = createBrowserRouter([
       {
         path: '/',
         element: <BaseLayout />,
-        children: [{ path: 'design-system', element: <DesignSystem /> }],
+        children: [
+          { path: 'design-system', element: <DesignSystem /> },
+          { path: 'result', element: <DiagnoseResult /> },
+        ],
+      },
+      {
+        path: '/',
+        element: <HeaderLayout />,
+        children: [{ path: 'health-diary', element: <HealthDiary /> }],
       },
       {
         path: '/',
