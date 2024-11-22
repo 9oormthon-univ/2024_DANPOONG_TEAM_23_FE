@@ -4,7 +4,7 @@ import LandingSonG from '~/assets/images/landing-song.png'
 function Landing() {
   return (
     <div className="h-dvh w-dvw bg-primary-50">
-      <div className="flex h-2/5 items-end justify-center">
+      <div className="flex h-2/5 max-w-screen-sm items-end justify-center">
         <LandingLogo />
       </div>
       <div className="absolute bottom-0 flex w-dvw max-w-screen-sm justify-center">
