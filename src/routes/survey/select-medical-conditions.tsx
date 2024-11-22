@@ -1,7 +1,8 @@
-import { useEffect, useRef, useState } from 'react'
+import { useState } from 'react'
 
 import { Button } from '~/components/ui/button'
 import { Toggle, ToggleCheckIcon } from '~/components/ui/toggle'
+import { EtcToggle } from '~/components/etc-toggle'
 
 import GraySonG from '~/assets/images/gray-song.png'
 
@@ -22,13 +23,6 @@ interface Props {
 function SelectMedicalConditions({ birthDate, gender }: Props) {
   const [selectedConditions, setSelectedConditions] = useState<string[]>([])
   const [otherCondition, setOtherCondition] = useState('')
-  const otherInputRef = useRef<HTMLInputElement>(null)
-
-  useEffect(() => {
-    if (selectedConditions.includes('기타') && otherInputRef.current) {
-      otherInputRef.current.focus()
-    }
-  }, [selectedConditions])
 
   const handleToggle = (condition: string) => {
     setSelectedConditions((prev) => {
@@ -47,11 +41,7 @@ function SelectMedicalConditions({ birthDate, gender }: Props) {
   const handleComplete = () => {
     const conditions = selectedConditions
       .filter((condition) => condition !== '기타')
-      .concat(
-        selectedConditions.includes('기타') && otherCondition
-          ? [otherCondition]
-          : [],
-      )
+      .concat(otherCondition ? [otherCondition] : [])
       .join(', ')
 
     console.log(birthDate)
@@ -75,47 +65,44 @@ function SelectMedicalConditions({ birthDate, gender }: Props) {
           <br /> 알려주세요!
         </p>
       </div>
+
       <div className="z-10 flex h-full max-h-[calc(100dvh-300px)] w-full flex-col items-start gap-2 overflow-y-scroll px-4">
-        {medicalConditions.map((condition) => (
-          <div key={condition} className="w-full">
-            <Toggle
-              className="w-full"
-              pressed={selectedConditions.includes(condition)}
-              onPressedChange={() => {
-                handleToggle(condition)
-              }}
-            >
-              <div className="flex w-full flex-col">
+        {medicalConditions
+          .filter((condition) => condition !== '기타')
+          .map((condition) => (
+            <div key={condition} className="w-full">
+              <Toggle
+                className="w-full"
+                pressed={selectedConditions.includes(condition)}
+                onPressedChange={() => {
+                  handleToggle(condition)
+                }}
+              >
                 <div className="flex items-center">
                   <ToggleCheckIcon />
                   <div className="ml-2">{condition}</div>
                 </div>
-                {condition === '기타' &&
-                  selectedConditions.includes('기타') && (
-                    <div className="mt-2 w-full px-8">
-                      <input
-                        ref={otherInputRef}
-                        value={otherCondition}
-                        onChange={(e) => {
-                          setOtherCondition(e.target.value)
-                        }}
-                        // To-Do: Enter Key 처리
-                        onKeyDown={(e) => {
-                          if (e.key === 'Space' || e.key === ' ') {
-                            e.stopPropagation()
-                            e.preventDefault()
-                          }
-                        }}
-                        placeholder="자유롭게 작성해주세요."
-                        className="w-full rounded-none border-0 border-b border-primary-500 bg-transparent px-0 pb-2 text-base placeholder:text-gray-400 focus:outline-none"
-                      />
-                    </div>
-                  )}
-              </div>
-            </Toggle>
-          </div>
-        ))}
+              </Toggle>
+            </div>
+          ))}
+
+        <EtcToggle
+          value={otherCondition}
+          onChange={(value) => {
+            setOtherCondition(value)
+            if (value && !selectedConditions.includes('기타')) {
+              setSelectedConditions((prev) =>
+                prev.includes('기저질환 없음') ? ['기타'] : [...prev, '기타'],
+              )
+            } else if (!value && selectedConditions.includes('기타')) {
+              setSelectedConditions((prev) =>
+                prev.filter((condition) => condition !== '기타'),
+              )
+            }
+          }}
+        />
       </div>
+
       <div className="absolute bottom-0 z-0 flex w-dvw max-w-screen-sm justify-center">
         <img src={GraySonG} />
       </div>
