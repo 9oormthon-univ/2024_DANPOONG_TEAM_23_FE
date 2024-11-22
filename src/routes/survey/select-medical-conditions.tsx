@@ -75,7 +75,7 @@ function SelectMedicalConditions({ birthDate, gender }: Props) {
           <br /> 알려주세요!
         </p>
       </div>
-      <div className="z-10 flex h-96 w-full flex-col items-start gap-2 overflow-scroll px-4">
+      <div className="z-10 flex h-full max-h-[calc(100dvh-300px)] w-full flex-col items-start gap-2 overflow-y-scroll px-4">
         {medicalConditions.map((condition) => (
           <div key={condition} className="w-full">
             <Toggle
