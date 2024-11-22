@@ -69,7 +69,7 @@ function MyHealthHistory() {
               </p>
             </div>
             <div className="flex items-center">
-              <p className="text-sm font-medium text-gray-500">근처의</p>
+              <p className="mr-1 text-sm font-medium text-gray-500">근처의 </p>
               <p className="text-base font-medium text-primary-500">냠냠병원</p>
               <p className="ml-1 text-sm font-medium text-gray-500">
                 을(를) 방문해보세요.
