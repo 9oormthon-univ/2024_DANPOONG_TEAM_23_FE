@@ -23,7 +23,7 @@ function SelectGender({ onNext }: Props) {
   }
 
   return (
-    <div className="z-10 flex h-dvh w-dvw flex-col items-center">
+    <div className="z-10 flex h-dvh w-dvw max-w-screen-sm flex-col items-center">
       <div className="flex h-12 w-full items-center justify-center gap-2">
         <div className="h-3 w-3 rounded-[50%] bg-gray-100"></div>
         <div className="h-3 w-3 rounded-[50%] bg-primary"></div>
