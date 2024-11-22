@@ -11,12 +11,12 @@ import GreetingSpeechBubble from '~/assets/svgs/greeting-speech-bubble.svg?react
 
 function Greeting() {
   return (
-    <div className="flex h-dvh max-w-screen-sm">
+    <div className="relative flex h-dvh w-full">
       <div className="size-[46px]">
         <img src={GreetingStar} className="absolute left-12 top-2" />
       </div>
       <div className="size-16">
-        <img src={GreetingLightning} className="absolute right-0 top-2" />
+        <img src={GreetingLightning} className="absolute right-0 top-8" />
       </div>
       <div className="size-16">
         <img src={GreetingSearch} className="absolute bottom-32 left-0" />
@@ -33,13 +33,13 @@ function Greeting() {
       <div className="size-16">
         <img src={GreetingRocket} className="absolute -bottom-14 right-0" />
       </div>
-      <div className="absolute bottom-[22rem] flex w-dvw max-w-screen-sm justify-center">
+      <div className="absolute bottom-[22rem] flex w-full justify-center">
         <GreetingSpeechBubble />
       </div>
-      <div className="absolute bottom-32 flex w-dvw max-w-screen-sm justify-center">
+      <div className="absolute bottom-32 flex w-full justify-center">
         <img src={GreetingSonG} />
       </div>
-      <div className="absolute bottom-2 flex w-dvw max-w-screen-sm justify-center">
+      <div className="absolute bottom-2 flex w-full justify-center">
         <Button className="w-4/5 max-w-[343px]">다음</Button>
       </div>
     </div>
