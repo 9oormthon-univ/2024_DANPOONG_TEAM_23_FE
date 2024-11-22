@@ -1,7 +1,5 @@
-# 의사손주
-
-> 노인 의료 디지털 소외 문제를 해결합니다.  
-> 내 손 안의 AI 주치의, 의사손주
+![sticker](https://github.com/user-attachments/assets/243f089f-f812-4783-9d85-fe731ec277a0)
+![poster](https://github.com/user-attachments/assets/08d8df45-1ebe-4885-92d1-5e5168cc11c8)
 
 ## 기술 스택
 
