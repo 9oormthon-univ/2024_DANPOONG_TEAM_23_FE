@@ -6,11 +6,11 @@ import '~/styles/globals.css'
 import { RootLayout } from '~/layouts/root-layout'
 import { Root } from '~/routes/root'
 import { DesignSystem } from '~/routes/design-system'
-import { BaseLayout } from './layouts/base-layout'
-import { Landing } from './routes/landing'
-import { Login } from './routes/login'
-import { Greeting } from './routes/greeting'
-import { Survey } from './routes/survey/survey'
+import { BaseLayout } from '~/layouts/base-layout'
+import { Landing } from '~/routes/landing'
+import { Login } from '~/routes/login'
+import { Greeting } from '~/routes/greeting'
+import { Survey } from '~/routes/survey/survey'
 
 const router = createBrowserRouter([
   {
