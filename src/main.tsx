@@ -30,11 +30,6 @@ const router = createBrowserRouter([
         element: <HeaderLayout />,
         children: [{ path: 'health-diary', element: <HealthDiary /> }],
       },
-      {
-        path: '/',
-        element: <HeaderLayout />,
-        children: [{ path: 'health-diary', element: <HealthDiary /> }],
-      },
     ],
   },
 ])
