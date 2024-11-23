@@ -15,9 +15,8 @@ function OnboardingThree() {
         <div className="h-3 w-3 rounded-[50%] bg-primary"></div>
       </div>
 
-      <div className="w-dvw max-w-screen-sm text-center">
+      <div className="mt-6 w-dvw max-w-screen-sm text-center">
         <p className="mr-1 text-lg font-bold text-gray-800">증상을 기록하고</p>
-
         <div className="flex w-dvw max-w-screen-sm justify-center">
           <p className="mr-1 text-lg font-bold text-primary-500">
             건강 변화를 한눈에
@@ -25,7 +24,7 @@ function OnboardingThree() {
           <p className="text-lg font-bold text-gray-800">확인하세요</p>
         </div>
       </div>
-      <div className="absolute -bottom-10 z-0 flex w-dvw max-w-screen-sm justify-center">
+      <div className="absolute -bottom-20 z-0 flex w-dvw max-w-screen-sm justify-center">
         <img src={OnboardingThreeImage} />
       </div>
       <div className="flex w-full justify-center px-4">

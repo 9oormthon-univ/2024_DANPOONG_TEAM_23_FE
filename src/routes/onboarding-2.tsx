@@ -15,7 +15,7 @@ function OnboardingTwo() {
         <div className="h-3 w-3 rounded-[50%] bg-gray-100"></div>
       </div>
 
-      <div className="w-dvw max-w-screen-sm text-center">
+      <div className="mt-6 w-dvw max-w-screen-sm text-center">
         <div className="flex w-dvw max-w-screen-sm justify-center">
           <p className="mr-1 text-lg font-bold text-gray-800">
             진료 결과에 따라
@@ -27,7 +27,7 @@ function OnboardingTwo() {
           <p className="text-lg font-bold text-gray-800">해드려요</p>
         </div>
       </div>
-      <div className="absolute -bottom-10 z-0 flex w-dvw max-w-screen-sm justify-center">
+      <div className="absolute -bottom-20 z-0 flex w-dvw max-w-screen-sm justify-center">
         <img src={OnboardingTwoImage} />
       </div>
       <div className="flex w-full justify-center px-4">

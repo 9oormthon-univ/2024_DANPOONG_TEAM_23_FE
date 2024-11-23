@@ -12,7 +12,7 @@ function Root() {
     <div className="relative h-dvh w-dvw max-w-screen-sm">
       <div className="absolute top-0 h-[50dvh] w-full bg-primary-500" />
 
-      <div className="relative">
+      <div className="relative h-full overflow-auto pb-40">
         <div className="flex h-16 w-full items-center justify-between px-4">
           <h1 className="text-xl font-bold text-white">홈</h1>
           <Link to="/settings">
@@ -34,13 +34,13 @@ function Root() {
         <div className="mt-6 flex flex-col gap-4 px-4">
           <Link
             to="/health-diary"
-            className="relative flex h-52 gap-2 rounded-sm bg-white p-4 shadow-sm"
+            className="relative flex h-52 gap-4 rounded-sm bg-white p-4 shadow-sm"
           >
             <div>
               <p className="text-lg font-bold text-gray-800">
                 내 증상 확인하기
               </p>
-              <p className="text-lg font-medium text-gray-500">
+              <p className="mt-2 text-lg font-medium text-gray-500">
                 인공지능으로 빠르고
                 <br />
                 쉽게 증상을
@@ -58,15 +58,15 @@ function Root() {
 
           <Link
             to="/my-health-history"
-            className="relative h-40 items-center gap-2 rounded-sm bg-white p-4 shadow-sm"
+            className="relative h-44 items-center gap-2 rounded-sm bg-white p-4 shadow-sm"
           >
             <div>
               <p className="text-lg font-bold text-gray-800">내 건강 기록</p>
-              <p className="text-lg font-medium text-gray-500">
+              <p className="mt-2 text-lg font-medium text-gray-500">
                 기록된 건강 정보를 한 눈에!
               </p>
             </div>
-            <div className="absolute bottom-3 right-4">
+            <div className="absolute bottom-2 right-4">
               <img src={Chart} className="size-28" />
             </div>
           </Link>
