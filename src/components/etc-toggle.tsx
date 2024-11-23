@@ -28,9 +28,15 @@ function EtcToggle({
           className="hidden w-full border-b border-primary-700 bg-transparent text-xs font-medium placeholder:text-gray-500 group-data-[state=on]:block"
           placeholder="자유롭게 작성해주세요."
           value={value}
-          onChange={(e) => { onChange(e.target.value); }}
-          onClick={(e) => { e.preventDefault(); }}
-          onKeyUp={(e) => { e.preventDefault(); }}
+          onChange={(e) => {
+            onChange(e.target.value)
+          }}
+          onClick={(e) => {
+            e.preventDefault()
+          }}
+          onKeyUp={(e) => {
+            e.preventDefault()
+          }}
         />
       </div>
     </Toggle>
