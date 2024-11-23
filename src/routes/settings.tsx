@@ -60,18 +60,19 @@ function Settings() {
                   onClick={() => {
                     setIsAgreed(!isAgreed)
                   }}
-                  className="mr-2 flex items-center"
+                  className="flex items-center gap-2"
                 >
                   <ToggleCheck
                     className={` ${isAgreed ? 'text-primary-500' : 'text-gray-100'}`}
                   />
+                  <span
+                    className={`mb-1 text-xs font-medium ${
+                      isAgreed ? 'text-gray-800' : 'text-gray-300'
+                    }`}
+                  >
+                    동의합니다.
+                  </span>
                 </button>
-                <label
-                  htmlFor="agree"
-                  className={`text-xs font-medium ${isAgreed ? 'text-gray-800' : 'text-gray-300'}`}
-                >
-                  동의합니다.
-                </label>
               </div>
 
               <div className="mt-6 flex w-full gap-2">

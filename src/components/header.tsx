@@ -17,7 +17,7 @@ function Header({
   onSettingClick,
 }: HeaderProps) {
   return (
-    <header className="border-gray50 fixed top-0 z-50 flex h-16 w-full max-w-screen-sm items-center justify-between border-b bg-white px-2.5 py-6">
+    <header className="fixed top-0 z-50 flex h-16 w-full max-w-screen-sm items-center justify-between border-b border-gray-50 bg-white px-2.5 py-6">
       <div className="w-10">
         {showGoBackButton && (
           <button
