@@ -41,6 +41,7 @@
     "eslint-plugin-react-refresh": "^0.4.14",
     "globals": "^15.11.0",
     "husky": "^9.1.6",
+    "kakao.maps.d.ts": "^0.1.40",
     "lint-staged": "^15.2.10",
     "postcss": "^8.4.49",
     "prettier": "^3.3.3",
