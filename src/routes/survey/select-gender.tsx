@@ -37,7 +37,7 @@ function SelectGender({ onNext }: Props) {
           성별은 어떻게 되시나요?
         </p>
       </div>
-      <div>
+      <div className="z-10">
         <GenderToggleGroup onValueChange={handleGenderChange} />
       </div>
       <div className="absolute bottom-0 z-0 flex w-dvw max-w-screen-sm justify-center">
