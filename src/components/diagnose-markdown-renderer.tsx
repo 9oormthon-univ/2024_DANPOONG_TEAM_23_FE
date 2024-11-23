@@ -10,7 +10,22 @@ function DiagnoseMarkdownRenderer({ mdxSource }: { mdxSource: string }) {
   useEffect(() => {
     const compileMDX = async () => {
       const { default: MDXContent } = await evaluate(mdxSource, runtime)
-      setContent(<MDXContent />)
+      setContent(
+        <MDXContent
+          components={{
+            strong: ({ children }) => (
+              <strong className="font-bold text-secondary-800">
+                {children}
+              </strong>
+            ),
+            em: ({ children }) => (
+              <em className="font-bold not-italic text-primary-500">
+                {children}
+              </em>
+            ),
+          }}
+        />,
+      )
     }
 
     compileMDX().catch((error: unknown) => {
