@@ -21,6 +21,7 @@ import { MyHealthHistory } from '~/routes/my-health-history'
 import { MonthlyHealthHistory } from '~/routes/monthly-health-history'
 import { MyHealthChange } from '~/routes/my-health-change'
 import { Settings } from '~/routes/settings'
+import { Hospital } from '~/routes/hospital'
 
 const router = createBrowserRouter([
   {
@@ -55,7 +56,10 @@ const router = createBrowserRouter([
       {
         path: '/',
         element: <HeaderLayout />,
-        children: [{ path: 'health-diary', element: <HealthDiary /> }],
+        children: [
+          { path: 'health-diary', element: <HealthDiary /> },
+          { path: 'hospital/:id', element: <Hospital /> },
+        ],
       },
     ],
   },
