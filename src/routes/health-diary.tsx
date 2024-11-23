@@ -15,6 +15,8 @@ function Step1({
 }: {
   onNext: (bodypart: keyof typeof BODYPARTS) => void
 }) {
+  const [wait, setWait] = useState(false)
+
   return (
     <>
       <h2 className="mt-12 text-center text-lg font-medium text-gray-800">
@@ -29,12 +31,16 @@ function Step1({
             <BodyPartToggle
               key={key}
               part={part}
+              disabled={wait}
               onClick={() => {
-                onNext(key as keyof typeof BODYPARTS)
+                setWait(true)
+                setTimeout(() => {
+                  onNext(key as keyof typeof BODYPARTS)
+                }, 400)
               }}
             />
           ))}
-          <BodyPartToggle>
+          <BodyPartToggle disabled={wait}>
             <span>기타</span>
           </BodyPartToggle>
         </div>
@@ -50,6 +56,8 @@ function Step2({
   part: keyof typeof BODYPARTS | undefined
   onNext: (detail: string) => void
 }) {
+  const [wait, setWait] = useState(false)
+
   return (
     part && (
       <>
@@ -75,14 +83,18 @@ function Step2({
             {Object.entries(BODYPARTS[part].parts).map(([key, part]) => (
               <BodyPartToggle
                 key={key}
+                disabled={wait}
                 onClick={() => {
-                  onNext(part)
+                  setWait(true)
+                  setTimeout(() => {
+                    onNext(part)
+                  }, 400)
                 }}
               >
                 {part}
               </BodyPartToggle>
             ))}
-            <BodyPartToggle>
+            <BodyPartToggle disabled={wait}>
               <span>기타</span>
             </BodyPartToggle>
           </div>
@@ -102,6 +114,7 @@ function Step3({ onNext }: { onNext: (feeling: string[]) => void }) {
     '당기는 느낌',
   ]
 
+  const [wait, setWait] = useState(false)
   const [selected, setSelected] = useState<string[]>([])
   const [etc, setEtc] = useState('')
 
@@ -117,6 +130,7 @@ function Step3({ onNext }: { onNext: (feeling: string[]) => void }) {
         type="multiple"
         className="mt-12 flex flex-1 flex-col justify-start gap-2.5 pb-12"
         value={selected}
+        disabled={wait}
         onValueChange={setSelected}
       >
         {options.map((option) => (
@@ -125,14 +139,17 @@ function Step3({ onNext }: { onNext: (feeling: string[]) => void }) {
             {option}
           </ToggleGroupItem>
         ))}
-        <EtcToggle value={etc} onChange={setEtc} />
+        <EtcToggle value={etc} disabled={wait} onChange={setEtc} />
       </ToggleGroup>
       <div className="sticky bottom-12 w-full max-w-screen-sm">
         <Button
           className="w-full"
           disabled={!selected.length && etc.length === 0}
           onClick={() => {
-            onNext(selected.slice().concat(etc))
+            setWait(true)
+            setTimeout(() => {
+              onNext(selected.slice().concat(etc))
+            }, 400)
           }}
         >
           다음
@@ -145,6 +162,8 @@ function Step3({ onNext }: { onNext: (feeling: string[]) => void }) {
 function Step4({ onNext }: { onNext: (level: string) => void }) {
   const options = ['약간 불편함', '보통 불편함', '매우 불편함']
 
+  const [wait, setWait] = useState(false)
+
   return (
     <>
       <h2 className="mt-12 text-center text-lg font-medium text-gray-800">
@@ -155,8 +174,12 @@ function Step4({ onNext }: { onNext: (level: string) => void }) {
       <ToggleGroup
         type="single"
         className="mt-12 flex flex-col gap-2.5"
+        disabled={wait}
         onValueChange={(value) => {
-          onNext(value)
+          setWait(true)
+          setTimeout(() => {
+            onNext(value)
+          }, 400)
         }}
       >
         {options.map((option) => (
@@ -179,6 +202,8 @@ function Step5({ onNext }: { onNext: (date: string) => void }) {
     '일주일 이내',
   ]
 
+  const [wait, setWait] = useState(false)
+
   return (
     <>
       <h2 className="mt-12 text-center text-lg font-medium text-gray-800">
@@ -189,8 +214,12 @@ function Step5({ onNext }: { onNext: (date: string) => void }) {
       <ToggleGroup
         type="single"
         className="mt-12 flex flex-col gap-2.5"
+        disabled={wait}
         onValueChange={(value) => {
-          onNext(value)
+          setWait(true)
+          setTimeout(() => {
+            onNext(value)
+          }, 400)
         }}
       >
         {options.map((option) => (
@@ -213,6 +242,8 @@ function Step6({ onNext }: { onNext: (frequency: string) => void }) {
     '한 달에 한 번',
   ]
 
+  const [wait, setWait] = useState(false)
+
   return (
     <>
       <h2 className="mt-12 text-center text-lg font-medium text-gray-800">
@@ -223,8 +254,12 @@ function Step6({ onNext }: { onNext: (frequency: string) => void }) {
       <ToggleGroup
         type="single"
         className="mt-12 flex flex-col gap-2.5"
+        disabled={wait}
         onValueChange={(value) => {
-          onNext(value)
+          setWait(true)
+          setTimeout(() => {
+            onNext(value)
+          }, 400)
         }}
       >
         {options.map((option) => (
@@ -251,6 +286,7 @@ function Step7({ onNext }: { onNext: (complex: string[]) => void }) {
   ]
 
   const [selected, setSelected] = useState<string[]>([])
+  const [wait, setWait] = useState(false)
 
   return (
     <>
@@ -266,6 +302,7 @@ function Step7({ onNext }: { onNext: (complex: string[]) => void }) {
           type="multiple"
           className="mt-12 grid w-full grid-cols-3 gap-5"
           value={selected}
+          disabled={wait}
           onValueChange={setSelected}
         >
           {options.map((option) => (
@@ -284,7 +321,10 @@ function Step7({ onNext }: { onNext: (complex: string[]) => void }) {
           className="w-full"
           disabled={!selected.length}
           onClick={() => {
-            onNext(selected)
+            setWait(true)
+            setTimeout(() => {
+              onNext(selected)
+            }, 400)
           }}
         >
           증상 분석하기
