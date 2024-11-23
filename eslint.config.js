@@ -41,6 +41,7 @@ export default tseslint.config(
         'error',
         { checksVoidReturn: false },
       ],
+      '@typescript-eslint/no-unnecessary-condition': 'off',
     },
     settings: { react: { version: '18.3' } },
   },

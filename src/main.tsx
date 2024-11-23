@@ -13,13 +13,15 @@ import { Login } from '~/routes/login'
 import { Greeting } from '~/routes/greeting'
 import { Survey } from '~/routes/survey/survey'
 import { HealthDiary } from '~/routes/health-diary'
-import { OnboardingOne } from './routes/onboarding-1'
-import { OnboardingTwo } from './routes/onboarding-2'
-import { OnboardingThree } from './routes/onboarding-3'
-import { MyHealthHistory } from './routes/my-health-history'
-import { MonthlyHealthHistory } from './routes/monthly-health-history'
-import { MyHealthChange } from './routes/my-health-change'
-import { Settings } from './routes/settings'
+import { DiagnoseResult } from '~/routes/diagnose-result'
+import { OnboardingOne } from '~/routes/onboarding-1'
+import { OnboardingTwo } from '~/routes/onboarding-2'
+import { OnboardingThree } from '~/routes/onboarding-3'
+import { MyHealthHistory } from '~/routes/my-health-history'
+import { MonthlyHealthHistory } from '~/routes/monthly-health-history'
+import { MyHealthChange } from '~/routes/my-health-change'
+import { Settings } from '~/routes/settings'
+import { Hospital } from '~/routes/hospital'
 
 const router = createBrowserRouter([
   {
@@ -46,12 +48,18 @@ const router = createBrowserRouter([
       {
         path: '/',
         element: <BaseLayout />,
-        children: [{ path: 'design-system', element: <DesignSystem /> }],
+        children: [
+          { path: 'design-system', element: <DesignSystem /> },
+          { path: 'result', element: <DiagnoseResult /> },
+        ],
       },
       {
         path: '/',
         element: <HeaderLayout />,
-        children: [{ path: 'health-diary', element: <HealthDiary /> }],
+        children: [
+          { path: 'health-diary', element: <HealthDiary /> },
+          { path: 'hospital/:id', element: <Hospital /> },
+        ],
       },
     ],
   },
