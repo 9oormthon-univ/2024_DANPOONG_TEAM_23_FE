@@ -249,7 +249,7 @@ function DesignSystem() {
 
           <h3 className="text-xl font-semibold">Card</h3>
           <div className="flex gap-4">
-            <HospitalCard name="냠냠병원" category="이비인후과" rating={4.3} />
+            <HospitalCard name="냠냠병원" category="이비인후과" />
           </div>
 
           <h3 className="text-xl font-semibold">Text Input</h3>
