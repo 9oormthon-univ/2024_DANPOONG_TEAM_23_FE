@@ -76,9 +76,9 @@ function DiagnoseResult() {
       </p>
       <h2 className="pt-10 text-lg font-bold">이 병원이 딱 맞을 것 같아요.</h2>
       <div className="mt-5 flex flex-col gap-2.5">
-        <HospitalCard name="냠냠병원" category="이비인후과" rating={4.3} />
-        <HospitalCard name="냠냠병원" category="이비인후과" rating={4.3} />
-        <HospitalCard name="냠냠병원" category="이비인후과" rating={4.3} />
+        <HospitalCard name="냠냠병원" category="이비인후과" />
+        <HospitalCard name="냠냠병원" category="이비인후과" />
+        <HospitalCard name="냠냠병원" category="이비인후과" />
       </div>
     </>
   )
