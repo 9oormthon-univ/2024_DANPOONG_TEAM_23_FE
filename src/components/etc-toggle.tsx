@@ -4,9 +4,11 @@ import { Toggle, ToggleCheckIcon } from '~/components/ui/toggle'
 
 function EtcToggle({
   value,
+  disabled,
   onChange,
 }: {
   value: string
+  disabled: boolean
   onChange: (value: string) => void
 }) {
   const [isEtcSelected, setIsEtcSelected] = useState(false)
@@ -18,6 +20,7 @@ function EtcToggle({
         setIsEtcSelected(pressed)
         onChange('')
       }}
+      disabled={disabled}
       className="group w-full items-start"
     >
       <ToggleCheckIcon className="mt-1.5" />
