@@ -23,19 +23,21 @@ function Step1({
         <br />
         골라주세요!
       </h2>
-      <div className="mt-12 grid w-full grid-cols-3 gap-5">
-        {Object.entries(BODYPARTS).map(([key, part]) => (
-          <BodyPartToggle
-            key={key}
-            part={part}
-            onClick={() => {
-              onNext(key as keyof typeof BODYPARTS)
-            }}
-          />
-        ))}
-        <BodyPartToggle>
-          <span>기타</span>
-        </BodyPartToggle>
+      <div className="mb-12 mt-12 flex-1">
+        <div className="grid w-full grid-cols-3 gap-5">
+          {Object.entries(BODYPARTS).map(([key, part]) => (
+            <BodyPartToggle
+              key={key}
+              part={part}
+              onClick={() => {
+                onNext(key as keyof typeof BODYPARTS)
+              }}
+            />
+          ))}
+          <BodyPartToggle>
+            <span>기타</span>
+          </BodyPartToggle>
+        </div>
       </div>
     </>
   )
@@ -68,20 +70,22 @@ function Step2({
           </span>{' '}
           말해주세요.
         </h2>
-        <div className="mt-12 grid w-full grid-cols-3 gap-5">
-          {Object.entries(BODYPARTS[part].parts).map(([key, part]) => (
-            <BodyPartToggle
-              key={key}
-              onClick={() => {
-                onNext(part)
-              }}
-            >
-              {part}
+        <div className="mb-12 mt-12 flex-1">
+          <div className="grid w-full grid-cols-3 gap-5">
+            {Object.entries(BODYPARTS[part].parts).map(([key, part]) => (
+              <BodyPartToggle
+                key={key}
+                onClick={() => {
+                  onNext(part)
+                }}
+              >
+                {part}
+              </BodyPartToggle>
+            ))}
+            <BodyPartToggle>
+              <span>기타</span>
             </BodyPartToggle>
-          ))}
-          <BodyPartToggle>
-            <span>기타</span>
-          </BodyPartToggle>
+          </div>
         </div>
       </>
     )
