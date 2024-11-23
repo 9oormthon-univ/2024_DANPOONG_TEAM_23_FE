@@ -18,7 +18,7 @@ import { MyHealthHistory } from '~/routes/my-health-history'
 import { MonthlyHealthHistory } from '~/routes/monthly-health-history'
 import { MyHealthChange } from '~/routes/my-health-change'
 import { Settings } from '~/routes/settings'
-import { Error } from '~/routes/error'
+import { ErrorPage } from '~/routes/error'
 import { Hospital } from '~/routes/hospital'
 import { OnBoard } from '~/routes/on-board'
 
@@ -38,7 +38,7 @@ const authorizedRouter = createBrowserRouter([
           { path: 'my-health-change', element: <MyHealthChange /> },
           { path: 'settings', element: <Settings /> },
           { path: 'on-board', element: <OnBoard /> },
-          { path: '*', element: <Error /> },
+          { path: '*', element: <ErrorPage /> },
         ],
       },
       {
