@@ -13,6 +13,7 @@ import { Login } from '~/routes/login'
 import { Greeting } from '~/routes/greeting'
 import { Survey } from '~/routes/survey/survey'
 import { HealthDiary } from '~/routes/health-diary'
+import { DiagnoseResult } from '~/routes/diagnose-result'
 import { OnboardingOne } from '~/routes/onboarding-1'
 import { OnboardingTwo } from '~/routes/onboarding-2'
 import { OnboardingThree } from '~/routes/onboarding-3'
@@ -21,6 +22,7 @@ import { MonthlyHealthHistory } from '~/routes/monthly-health-history'
 import { MyHealthChange } from '~/routes/my-health-change'
 import { Settings } from '~/routes/settings'
 import { Error } from '~/routes/error'
+import { Hospital } from '~/routes/hospital'
 
 const authorizedRouter = createBrowserRouter([
   {
@@ -42,8 +44,19 @@ const authorizedRouter = createBrowserRouter([
       },
       {
         path: '/',
+        element: <BaseLayout />,
+        children: [
+          { path: 'design-system', element: <DesignSystem /> },
+          { path: 'result', element: <DiagnoseResult /> },
+        ],
+      },
+      {
+        path: '/',
         element: <HeaderLayout />,
-        children: [{ path: 'health-diary', element: <HealthDiary /> }],
+        children: [
+          { path: 'health-diary', element: <HealthDiary /> },
+          { path: 'hospital/:id', element: <Hospital /> },
+        ],
       },
     ],
   },

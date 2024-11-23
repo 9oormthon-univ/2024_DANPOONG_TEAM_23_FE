@@ -23,7 +23,10 @@
     "noUncheckedSideEffectImports": true,
 
     /* Paths */
-    "paths": { "~/*": ["./src/*"] }
+    "paths": { "~/*": ["./src/*"] },
+
+    /* Types */
+    "types": ["kakao.maps.d.ts"]
   },
   "include": ["src", "svg.d.ts"],
   "types": ["vite-plugin-svgr/client"]
