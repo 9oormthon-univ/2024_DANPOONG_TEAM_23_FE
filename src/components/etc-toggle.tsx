@@ -8,7 +8,7 @@ function EtcToggle({
   onChange,
 }: {
   value: string
-  disabled: boolean
+  disabled?: boolean
   onChange: (value: string) => void
 }) {
   const [isEtcSelected, setIsEtcSelected] = useState(false)
