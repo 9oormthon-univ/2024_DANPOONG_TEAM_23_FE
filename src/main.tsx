@@ -8,6 +8,10 @@ import { BaseLayout } from '~/layouts/base-layout'
 import { HeaderLayout } from '~/layouts/header-layout'
 import { Root } from '~/routes/root'
 import { DesignSystem } from '~/routes/design-system'
+import { Landing } from '~/routes/landing'
+import { Login } from '~/routes/login'
+import { Greeting } from '~/routes/greeting'
+import { Survey } from '~/routes/survey/survey'
 import { HealthDiary } from '~/routes/health-diary'
 import { DiagnoseResult } from '~/routes/diagnose-result'
 
@@ -16,7 +20,16 @@ const router = createBrowserRouter([
     path: '/',
     element: <RootLayout />,
     children: [
-      { path: '/', children: [{ index: true, element: <Root /> }] },
+      {
+        path: '/',
+        children: [
+          { index: true, element: <Root /> },
+          { path: 'landing', element: <Landing /> },
+          { path: 'login', element: <Login /> },
+          { path: 'greeting', element: <Greeting /> },
+          { path: 'survey', element: <Survey /> },
+        ],
+      },
       {
         path: '/',
         element: <BaseLayout />,
