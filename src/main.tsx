@@ -14,13 +14,15 @@ import { Greeting } from '~/routes/greeting'
 import { Survey } from '~/routes/survey/survey'
 import { HealthDiary } from '~/routes/health-diary'
 import { DiagnoseResult } from '~/routes/diagnose-result'
+import { OnboardingOne } from '~/routes/onboarding-1'
+import { OnboardingTwo } from '~/routes/onboarding-2'
+import { OnboardingThree } from '~/routes/onboarding-3'
 import { MyHealthHistory } from '~/routes/my-health-history'
 import { MonthlyHealthHistory } from '~/routes/monthly-health-history'
 import { MyHealthChange } from '~/routes/my-health-change'
 import { Settings } from '~/routes/settings'
 import { Error } from '~/routes/error'
 import { Hospital } from '~/routes/hospital'
-import { OnBoard } from '~/routes/on-board'
 
 const authorizedRouter = createBrowserRouter([
   {
@@ -37,7 +39,6 @@ const authorizedRouter = createBrowserRouter([
           { path: 'monthly-health-history', element: <MonthlyHealthHistory /> },
           { path: 'my-health-change', element: <MyHealthChange /> },
           { path: 'settings', element: <Settings /> },
-          { path: 'on-board', element: <OnBoard /> },
           { path: '*', element: <Error /> },
         ],
       },
@@ -68,6 +69,9 @@ const publicRouter = createBrowserRouter([
     children: [
       { path: 'landing', element: <Landing /> },
       { path: 'login', element: <Login /> },
+      { path: 'onboarding-1', element: <OnboardingOne /> },
+      { path: 'onboarding-2', element: <OnboardingTwo /> },
+      { path: 'onboarding-3', element: <OnboardingThree /> },
       { path: '*', element: <Login /> },
     ],
   },
