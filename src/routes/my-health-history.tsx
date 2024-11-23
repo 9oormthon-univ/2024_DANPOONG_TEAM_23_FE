@@ -41,7 +41,7 @@ function MyHealthHistory() {
                 </p>
               </div>
             </div>
-            <Button className="mt-2 flex w-full items-center justify-center rounded-sm border p-3 font-medium">
+            <Button className="mt-2 flex w-full items-center justify-center rounded-sm border-0 p-3 font-medium">
               건강 변화 자세히 보기
             </Button>
           </div>
@@ -75,7 +75,7 @@ function MyHealthHistory() {
                 을(를) 방문해보세요.
               </p>
             </div>
-            <Button className="mt-4 w-full rounded-sm border border-gray-100 bg-white p-3 text-center text-lg font-medium text-primary-500">
+            <Button className="mt-4 w-full rounded-sm border border-gray-50 bg-white p-3 text-center text-lg font-medium text-primary-500">
               내 주변 병원 보기
             </Button>
             <Button className="mt-2 w-full rounded-sm bg-primary-500 p-3 text-center font-medium text-white">
