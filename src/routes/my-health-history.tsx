@@ -1,13 +1,20 @@
+import { useNavigate } from 'react-router-dom'
+
 import { BottomNavigationBar } from '~/components/bottom-navigation-bar'
 import { Header } from '~/components/header'
 import { Button } from '~/components/ui/button'
-
 import Warning from '~/assets/images/warning.png'
 
 function MyHealthHistory() {
+  const navigate = useNavigate()
+
   return (
     <div className="h-dvh w-dvw max-w-screen-sm">
-      <Header title="내 건강 기록" showGoBackButton={true} />
+      <Header
+        title="내 건강 기록"
+        showGoBackButton={true}
+        showSettingButton={true}
+      />
 
       <div className="mt-16 flex h-4/5 max-h-[calc(100dvh+400px)] flex-col gap-6 overflow-y-scroll p-3">
         {/* 프로필 섹션 */}
@@ -41,7 +48,12 @@ function MyHealthHistory() {
                 </p>
               </div>
             </div>
-            <Button className="mt-2 flex w-full items-center justify-center rounded-sm border-0 p-3 font-medium">
+            <Button
+              onClick={() => {
+                navigate('/my-health-change')
+              }}
+              className="mt-2 flex w-full items-center justify-center rounded-sm border-0 p-3 font-medium"
+            >
               건강 변화 자세히 보기
             </Button>
           </div>
@@ -78,7 +90,12 @@ function MyHealthHistory() {
             <Button className="mt-4 w-full rounded-sm border border-gray-50 bg-white p-3 text-center text-lg font-medium text-primary-500">
               내 주변 병원 보기
             </Button>
-            <Button className="mt-2 w-full rounded-sm bg-primary-500 p-3 text-center font-medium text-white">
+            <Button
+              onClick={() => {
+                navigate('/monthly-health-history')
+              }}
+              className="mt-2 w-full rounded-sm bg-primary-500 p-3 text-center font-medium text-white"
+            >
               지난 진단 결과 보기
             </Button>
           </div>
@@ -90,10 +107,14 @@ function MyHealthHistory() {
                 아직 진단 결과가 없어요
               </p>
             </div>
-            <Button className="mt-4 w-full rounded-sm border border-gray-100 bg-white p-3 text-center text-lg font-medium text-primary-500">
+            <Button onClick={() => {navigate('/health-diary')}} className="mt-4 w-full rounded-sm border border-gray-100 bg-white p-3 text-center text-lg font-medium text-primary-500">
               진단하러 가기
             </Button>
-            <Button className="mt-2 w-full rounded-sm bg-primary-500 p-3 text-center font-medium text-white">
+            <Button 
+              onClick={() => {
+                navigate('/monthly-health-history')
+              }}
+              className="mt-2 w-full rounded-sm bg-primary-500 p-3 text-center font-medium text-white">
               지난 진단 결과 보기
             </Button>
           </div>
