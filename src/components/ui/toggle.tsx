@@ -35,9 +35,14 @@ function Toggle({ className, variant, size, children, ...props }: ToggleProps) {
   )
 }
 
-function ToggleCheckIcon() {
+function ToggleCheckIcon({ className }: { className?: string }) {
   return (
-    <ToggleCheck className="text-gray-100 transition-colors group-data-[state=on]:text-primary-500 [&_svg]:pointer-events-none [&_svg]:size-6 [&_svg]:shrink-0" />
+    <ToggleCheck
+      className={cn(
+        'text-gray-100 transition-colors group-data-[state=on]:text-primary-500 [&_svg]:pointer-events-none [&_svg]:size-6 [&_svg]:shrink-0',
+        className,
+      )}
+    />
   )
 }
 

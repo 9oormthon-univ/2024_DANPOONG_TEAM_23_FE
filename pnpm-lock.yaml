@@ -13,6 +13,9 @@ importers:
       '@radix-ui/react-toggle-group':
         specifier: ^1.0.4
         version: 1.1.0(@types/react-dom@18.3.1)(@types/react@18.3.12)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@use-funnel/react-router-dom':
+        specifier: ^0.0.7
+        version: 0.0.7(react-router-dom@6.28.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)
       clsx:
         specifier: ^2.1.1
         version: 2.1.1
@@ -1408,6 +1411,23 @@ packages:
         integrity: sha512-vG0XZo8AdTH9OE6VFRwAZldNc7qtJ/6NLGWak+BtENuEUXGZgFpihILPiBvKXvJ2nFu27XNGC6rKiwuaoMbYzQ==,
       }
     engines: { node: ^18.18.0 || ^20.9.0 || >=21.1.0 }
+
+  '@use-funnel/core@0.0.7':
+    resolution:
+      {
+        integrity: sha512-aInoq3dv5MSuYIPb1w1Y1pTJEAncQghoX99suMwsqnkMGunnCOw6UAPo131oyM4H52m2rbsoBnHBreDEDYmvzg==,
+      }
+    peerDependencies:
+      react: '>=16.8'
+
+  '@use-funnel/react-router-dom@0.0.7':
+    resolution:
+      {
+        integrity: sha512-fuV7Cc3MYLeBb15hewhZc2sTY+l2y8IdOAI5PSfp+h1GSiS5C6ht/0XJj8bppTxOWpchwLnAT3yefFyXF9gFLA==,
+      }
+    peerDependencies:
+      react: '>=16.8'
+      react-router-dom: '>=6'
 
   '@vitejs/plugin-react-swc@3.7.1':
     resolution:
@@ -5016,6 +5036,16 @@ snapshots:
     dependencies:
       '@typescript-eslint/types': 8.14.0
       eslint-visitor-keys: 3.4.3
+
+  '@use-funnel/core@0.0.7(react@18.3.1)':
+    dependencies:
+      react: 18.3.1
+
+  '@use-funnel/react-router-dom@0.0.7(react-router-dom@6.28.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)':
+    dependencies:
+      '@use-funnel/core': 0.0.7(react@18.3.1)
+      react: 18.3.1
+      react-router-dom: 6.28.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
 
   '@vitejs/plugin-react-swc@3.7.1(vite@5.4.11(@types/node@22.9.0))':
     dependencies:
