@@ -21,9 +21,10 @@ import { MyHealthHistory } from '~/routes/my-health-history'
 import { MonthlyHealthHistory } from '~/routes/monthly-health-history'
 import { MyHealthChange } from '~/routes/my-health-change'
 import { Settings } from '~/routes/settings'
+import { Error } from '~/routes/error'
 import { Hospital } from '~/routes/hospital'
 
-const router = createBrowserRouter([
+const authorizedRouter = createBrowserRouter([
   {
     path: '/',
     element: <RootLayout />,
@@ -32,17 +33,13 @@ const router = createBrowserRouter([
         path: '/',
         children: [
           { index: true, element: <Root /> },
-          { path: 'landing', element: <Landing /> },
-          { path: 'login', element: <Login /> },
-          { path: 'onboarding-1', element: <OnboardingOne /> },
-          { path: 'onboarding-2', element: <OnboardingTwo /> },
-          { path: 'onboarding-3', element: <OnboardingThree /> },
           { path: 'greeting', element: <Greeting /> },
           { path: 'survey', element: <Survey /> },
           { path: 'my-health-history', element: <MyHealthHistory /> },
           { path: 'monthly-health-history', element: <MonthlyHealthHistory /> },
           { path: 'my-health-change', element: <MyHealthChange /> },
           { path: 'settings', element: <Settings /> },
+          { path: '*', element: <Error /> },
         ],
       },
       {
@@ -65,11 +62,35 @@ const router = createBrowserRouter([
   },
 ])
 
+const publicRouter = createBrowserRouter([
+  {
+    path: '/',
+    element: <RootLayout />,
+    children: [
+      { path: 'landing', element: <Landing /> },
+      { path: 'login', element: <Login /> },
+      { path: 'onboarding-1', element: <OnboardingOne /> },
+      { path: 'onboarding-2', element: <OnboardingTwo /> },
+      { path: 'onboarding-3', element: <OnboardingThree /> },
+      { path: '*', element: <Login /> },
+    ],
+  },
+  {
+    path: '/',
+    element: <BaseLayout />,
+    children: [{ path: 'design-system', element: <DesignSystem /> }],
+  },
+])
+
 const rootElement = document.getElementById('root')
 if (rootElement) {
   createRoot(rootElement).render(
     <StrictMode>
-      <RouterProvider router={router} />
+      <RouterProvider
+        router={
+          localStorage.getItem('accessToken') ? authorizedRouter : publicRouter
+        }
+      />
     </StrictMode>,
   )
 } else {
