@@ -9,20 +9,22 @@ function Hospital() {
   const mapRef = useRef(null)
 
   useEffect(() => {
-    const position = new kakao.maps.LatLng(33.450701, 126.570667)
+    if (mapRef.current) {
+      const position = new kakao.maps.LatLng(33.450701, 126.570667)
 
-    const options = {
-      center: position,
-      level: 3,
+      const options = {
+        center: position,
+        level: 3,
+      }
+
+      const marker = new kakao.maps.Marker({
+        position,
+      })
+
+      const map = new kakao.maps.Map(mapRef.current, options)
+
+      marker.setMap(map)
     }
-
-    const marker = new kakao.maps.Marker({
-      position,
-    })
-
-    const map = new kakao.maps.Map(mapRef.current, options)
-
-    marker.setMap(map)
   }, [])
 
   return (
